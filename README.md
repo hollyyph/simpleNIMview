@@ -1,4 +1,6 @@
-# try_vue
+# simpleNIMview
+Frontend VueJS for simpleNIM project.
+http://github.com/hollyyph/simpleNIM
 
 ## Project setup
 ```
