@@ -120,7 +120,7 @@ export default {
         },
 
         updatenim() { //fungsi 4 blom bisa
-            var url = this.backendURL + "/api/simplenims/"
+            var url = "/api/simplenims/"
             this.$axios.put(url, {
                 nim: this.nim4,
                 name: this.name4
@@ -140,11 +140,11 @@ export default {
         },
 
         insertnim() {//fungsi 3
-        var url = this.backendURL + "/api/simplenims/"
+        var url = "/api/simplenims/"
             this.$axios.post(url, { //masih bad request 400
                 nim: this.nim3,
                 name: this.name3,
-                status: true
+
             })
                 .then((res) =>{ 
                     this.dataNIM = res.data
@@ -164,7 +164,7 @@ export default {
         },
 
         deletenim() {//fungsi 2
-        var url = this.backendURL+ "/api/simplenims/"+ this.nim2
+        var url = "/api/simplenims/"+ this.nim2
         this.$axios.delete(url)
             .then((res) => {
                 alert("Succeed DELETE NIM "+  this.nim2);
@@ -179,7 +179,7 @@ export default {
         },
 
         readnim() { //fungsi 1
-            var url = this.backendURL+ "/api/simplenims/" + this.nim1
+            var url = "/api/simplenims/" + this.nim1
             this.$axios.get(url)
                 .then((res) =>{
                     this.nama1 = res.data.nama
@@ -187,7 +187,7 @@ export default {
                     this.message = res.message
                 })
                 .catch((err) => {
-                    console.log("Error GET data NIM " + this.nim1)
+                    console.log("Error GET data NIM " + this.nim1+ " " + this.backendURL)
                     alert("Error GET data NIM " + this.nim1)
                     this.message = err
                 })                        
