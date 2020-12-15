@@ -4,6 +4,7 @@
   <h1>Simple NIM Finder</h1>
   </div>
   <div>
+    <v-btn @click="test()">Tes</v-btn>
     <br>
     <h3> Mau cari nama dari sebuah NIM?</h3>
     <form>
@@ -182,6 +183,8 @@ export default {
             var url = "/api/simplenims/" + this.nim1
             this.$axios.get(url)
                 .then((res) =>{
+                    // console.log('req ', JSON.stringify(req))
+                    console.log('res ', JSON.stringify(res))
                     this.nama1 = res.data.nama
                     console.log("Succeed GET data NIM " + this.nim1)
                     this.message = res.message
@@ -192,6 +195,10 @@ export default {
                     this.message = err
                 })                        
         },
+        test() {
+            var url = "/api/simplenims/"
+            this.$axios.get(url).then((res) => alert('res ', res)).catch((err) => alert(err))
+        }
      },
 }
 </script>
