@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
-/dist
+
+# remove /dist when deploy to heroku hehehe
 
 
 # local env files

@@ -1,0 +1,5 @@
+dev.env.js
+prod.env.js
+node_modules
+.git
+.gitignore
