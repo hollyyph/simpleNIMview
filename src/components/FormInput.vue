@@ -188,7 +188,7 @@ export default {
                 })
                 .catch((err) => {
                     console.log("Error GET data NIM " + this.nim1+ " " + this.backendURL)
-                    alert("Error GET data NIM " + this.nim1)
+                    alert("Error GET data NIM " + this.nim1 + " \n " + err)
                     this.message = err
                 })                        
         },
