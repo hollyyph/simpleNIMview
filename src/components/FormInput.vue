@@ -197,7 +197,7 @@ export default {
         },
         test() {
             var url = this.backendURL + "/api/simplenims/"
-            this.$axios.get(url).then((res) => alert('res ', res)).catch((err) => alert(err))
+            this.$axios.get(url).then((res) => alert(`res ${res}`)).catch((err) => alert(err))
         }
      },
 }
